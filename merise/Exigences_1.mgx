@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner AppLocale="UTF16" ID="{BC7DF71E-D9A5-4F56-9220-7770591DCCF4}" Label="" LastModificationDate="1374581813" Name="Exigences_1" Objects="21" Symbols="0" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" signature="RQM_MODEL_XML" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
+
+<o:RootObject Id="o1">
+<c:Children>
+<o:Model Id="o2">
+<a:ObjectID>BC7DF71E-D9A5-4F56-9220-7770591DCCF4</a:ObjectID>
+<a:Name>Exigences_1</a:Name>
+<a:Code>Exigences_1</a:Code>
+<a:CreationDate>1374579863</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581722</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:ModelOptionsText>[ModelOptions]
+
+[ModelOptions\Requirements model options]
+CaseSensitive=No
+DisplayName=Yes
+EnableTrans=No
+EnableRequirements=No
+Police du texte=Times New Roman,10,
+Couleur du texte=0 0 0
+Police de titre 1=Times New Roman,16,B
+Couleur de titre 1=0 0 128
+Police de titre 2=Times New Roman,15,B
+Couleur de titre 2=128 0 255
+Police de titre 3=Times New Roman,15,B
+Couleur de titre 3=0 0 255
+Police de titre 4=Times New Roman,15,B
+Couleur de titre 4=255 0 255
+Police de titre 5=Times New Roman,15,IU
+Couleur de titre 5=0 128 0
+Police de titre 6=Times New Roman,15,BIU
+Couleur de titre 6=0 0 0
+Police de titre 7=Times New Roman,15,IU
+Couleur de titre 7=0 0 0
+Police de titre 8=Times New Roman,15,IU
+Couleur de titre 8=0 0 0
+Police de titre 9=Times New Roman,15,IU
+Couleur de titre 9=0 0 0
+
+[ModelOptions\Requirements model options\NamingOptionsTemplates]
+
+[ModelOptions\Requirements model options\ClssNamingOptions]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMPCKG]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMPCKG\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMPCKG\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\TERM]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\TERM\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\TERM\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\USER]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\USER\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\USER\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\GRPE]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\GRPE\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\GRPE\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMT]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMT\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=0
+Script=EXG_%-4:Increment%
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\RQMT\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=0
+Script=
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FILO]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FILO\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=&quot;\/:*?&lt;&gt;|&quot;
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FILO\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_. &quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMEOBJ]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMEOBJ\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMEOBJ\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMELNK]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMELNK\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\FRMELNK\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\DefaultClass]
+
+[ModelOptions\Requirements model options\ClssNamingOptions\DefaultClass\Name]
+Template=
+MaxLen=254
+Case=M
+ValidChar=
+InvldChar=
+AllValid=Yes
+NoAccent=No
+DefaultChar=_
+Script=.convert_name(%Name%,&quot;_&quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion
+
+[ModelOptions\Requirements model options\ClssNamingOptions\DefaultClass\Code]
+Template=
+MaxLen=254
+Case=M
+ValidChar=&#39;a&#39;-&#39;z&#39;,&#39;A&#39;-&#39;Z&#39;,&#39;0&#39;-&#39;9&#39;,&quot;_&quot;
+InvldChar=
+AllValid=No
+NoAccent=Yes
+DefaultChar=_
+Script=.convert_code(%Code%,&quot; &quot;)
+ConvTable=
+ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion</a:ModelOptionsText>
+<c:DocumentViews>
+<o:RequirementsDocumentView Id="o3">
+<a:ObjectID>E00DC698-B6AD-4BD5-88A7-7EC89B347F46</a:ObjectID>
+<a:Name>VueDocument_1</a:Name>
+<a:Code>VueDocument_1</a:Code>
+<a:CreationDate>1374579863</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374579918</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:DisplayPreferences>[DisplayPreferences]
+
+[DisplayPreferences\ALL]
+
+[DisplayPreferences\General]
+Adjust to text=Yes
+Snap Grid=No
+Constrain Labels=Yes
+Display Grid=No
+Show Page Delimiter=Yes
+Grid size=0
+Graphic unit=2
+Window color=255, 255, 255
+Background image=
+Background mode=8
+Watermark image=
+Watermark mode=8
+Show watermark on screen=No
+Gradient mode=0
+Gradient end color=255, 255, 255
+Show Swimlane=No
+SwimlaneVert=Yes
+TreeVert=No
+CompDark=0
+
+[DisplayPreferences\Object]
+Mode=2
+Trunc Length=40
+Word Length=40
+Word Text=!&quot;&quot;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
+Shortcut IntIcon=Yes
+Shortcut IntLoct=Yes
+Shortcut IntFullPath=No
+Shortcut IntLastPackage=Yes
+Shortcut ExtIcon=Yes
+Shortcut ExtLoct=No
+Shortcut ExtFullPath=No
+Shortcut ExtLastPackage=Yes
+Shortcut ExtIncludeModl=Yes
+EObjShowStrn=Yes
+ExtendedObject.Comment=No
+ExtendedObject.IconPicture=No
+ExtendedObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Nom de l&amp;#39;objet&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF] &lt;Separator Name=&quot;Séparateur&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Commentaire&quot; Attribute=&quot;Comment&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;LEFT&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
+ELnkShowStrn=Yes
+ELnkShowName=Yes
+ExtendedLink_SymbolLayout=&lt;Form&gt;[CRLF] &lt;Form Name=&quot;Centre&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Source&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Destination&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF]&lt;/Form&gt;
+FileObject.Stereotype=No
+FileObject.DisplayName=Yes
+FileObject.LocationOrName=No
+FileObject.IconPicture=No
+FileObject.IconMode=Yes
+FileObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;ExclusiveChoice Name=&quot;Choix exclusif&quot; Mandatory=&quot;Yes&quot; Display=&quot;HorizontalRadios&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Emplacement&quot; Attribute=&quot;LocationOrName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/ExclusiveChoice&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
+Display Model Version=Yes
+
+[DisplayPreferences\Symbol]
+
+[DisplayPreferences\Symbol\FRMEOBJ]
+STRNFont=Arial,8,N
+STRNFont color=0, 0, 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0, 0, 0
+LABLFont=Arial,8,N
+LABLFont color=0, 0, 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=6000
+Height=2000
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=6
+Brush bitmap mode=12
+Brush gradient mode=64
+Brush gradient color=192 192 192
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 255 128 128
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\FRMELNK]
+CENTERFont=Arial,8,N
+CENTERFont color=0, 0, 0
+Line style=1
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 128 128 255
+Shadow color=192 192 192
+Shadow=0
+
+[DisplayPreferences\Symbol\FILO]
+OBJSTRNFont=Arial,8,N
+OBJSTRNFont color=0, 0, 0
+DISPNAMEFont=Arial,8,N
+DISPNAMEFont color=0, 0, 0
+LCNMFont=Arial,8,N
+LCNMFont color=0, 0, 0
+AutoAdjustToText=Yes
+Keep aspect=No
+Keep center=No
+Keep size=No
+Width=4800
+Height=3600
+Brush color=255 255 255
+Fill Color=Yes
+Brush style=1
+Brush bitmap mode=12
+Brush gradient mode=0
+Brush gradient color=118 118 118
+Brush background image=
+Custom shape=
+Custom text mode=0
+Pen=1 0 0 0 255
+Shadow color=192 192 192
+Shadow=0</a:DisplayPreferences>
+<a:PaperSize>(8268, 11693)</a:PaperSize>
+<a:PageMargins>((315,354), (433,354))</a:PageMargins>
+<a:PageOrientation>1</a:PageOrientation>
+<a:PaperSource>15</a:PaperSource>
+<a:ColumnPreferences>NAME -1 TLID 90 HLNK -1 TTID -1 MDOC -1 AUSRS -1 UCOD -1 HASNOTE -1 TMDL -1 RPLA -1 FDSC 306 TIDT -1 CODE 80 PRNT -1 DISPNAME -1 OBJTYPE -1 CDAT -1 CUSR -1 MDAT -1 MUSR -1 OMDAT -1 CLSSNAME -1 FLDR -1 SDSC -1 OLOC -1 PCKG -1 NOTETEXT -1 DESCTEXT -1 LABL -1 GENEORGN -1 STRN -1 MODL -1 COMP -1 MSTP -1 LEVL -1 PRTY 80 WKLD 80 WKD2 -1 WKD3 -1 WKD4 -1 SELD -1 TYPE -1 RISK 86 VRFM -1 STTS 80</a:ColumnPreferences>
+</o:RequirementsDocumentView>
+</c:DocumentViews>
+<c:DefaultDiagram>
+<o:RequirementsDocumentView Ref="o3"/>
+</c:DefaultDiagram>
+<c:Requirements>
+<o:Requirement Id="o4">
+<a:ObjectID>61F34F7D-A569-41B4-8080-7B153787A03E</a:ObjectID>
+<a:Requirement.Title>anyone has access to the website except for admin and personnal areas</a:Requirement.Title>
+<a:Code>EXG_0001</a:Code>
+<a:CreationDate>1374579863</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580071</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>1</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+<a:Description>{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\cf1\f0\fs20\par
+}
+</a:Description>
+</o:Requirement>
+<o:Requirement Id="o5">
+<a:ObjectID>02F29DC1-E6A2-4C4C-B1D9-2D469C80F43B</a:ObjectID>
+<a:Requirement.Title>A user must be able to sing in/up</a:Requirement.Title>
+<a:Code>EXG_0002</a:Code>
+<a:CreationDate>1374580019</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580128</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>2</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o6">
+<a:ObjectID>050AA673-A520-452D-BF93-E50615A975C4</a:ObjectID>
+<a:Requirement.Title>All subscription must grant immediate access to the website</a:Requirement.Title>
+<a:Code>EXG_0003</a:Code>
+<a:CreationDate>1374580128</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580175</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>1</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o7">
+<a:ObjectID>EAFD5459-A719-4860-AE60-ED74F075E7A2</a:ObjectID>
+<a:Requirement.Title>To allow purchase the user must confirm his email if not done previously</a:Requirement.Title>
+<a:Code>EXG_0004</a:Code>
+<a:CreationDate>1374580175</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580256</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o8">
+<a:ObjectID>64A4FCD8-5069-4FE8-BDC1-FB6D61BC6F5C</a:ObjectID>
+<a:Requirement.Title>personnal infomation will consist of my account, history, likes and interventions</a:Requirement.Title>
+<a:Code>EXG_0005</a:Code>
+<a:CreationDate>1374580256</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580366</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>3</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o9">
+<a:ObjectID>2ED0BF51-3E0B-4454-805A-E42D06264C5A</a:ObjectID>
+<a:Requirement.Title>The access will be on 4 levels: user, admin(for the band , &#39;to give access to their stats&#39;), super(for administrative purposes) and main (same as super with the possibility of adding other super)</a:Requirement.Title>
+<a:Code>EXG_0006</a:Code>
+<a:CreationDate>1374580366</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580535</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>3</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>3</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o10">
+<a:ObjectID>F0D262AF-B88C-4046-BE45-A57AEF2B3E2D</a:ObjectID>
+<a:Requirement.Title>Develop a profile section</a:Requirement.Title>
+<a:Code>EXG_0007</a:Code>
+<a:CreationDate>1374580535</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580611</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>3</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>2</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o11">
+<a:ObjectID>9F3AF180-90D8-4B24-A505-28132BAD074B</a:ObjectID>
+<a:Requirement.Title>A unauthentified user can listen to demos </a:Requirement.Title>
+<a:Code>EXG_0008</a:Code>
+<a:CreationDate>1374580611</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580668</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>2</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o12">
+<a:ObjectID>231BA1BD-9651-4D75-8FF1-87205BDF0EEA</a:ObjectID>
+<a:Requirement.Title>An unauthentified user is proposed to sign up in order to access whole songs and facilities</a:Requirement.Title>
+<a:Code>EXG_0009</a:Code>
+<a:CreationDate>1374580668</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580721</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o13">
+<a:ObjectID>C671B6D3-C248-452B-B27A-3D99E29CDFB6</a:ObjectID>
+<a:Requirement.Title>Tweets and fb publications are visible to everyone</a:Requirement.Title>
+<a:Code>EXG_0010</a:Code>
+<a:CreationDate>1374580721</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374580806</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o14">
+<a:ObjectID>64A2840D-FD0E-4B9E-9786-90A68A8DF23D</a:ObjectID>
+<a:Requirement.Title>No data is erased from the DBMS, they are passed from active to inactive</a:Requirement.Title>
+<a:Code>EXG_0011</a:Code>
+<a:CreationDate>1374580795</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581022</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>3</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o15">
+<a:ObjectID>8E5ED3B2-F42B-4E3C-98E3-D92A5F102554</a:ObjectID>
+<a:Requirement.Title>The band can upload their pictures, audios and vidéos</a:Requirement.Title>
+<a:Code>EXG_0012</a:Code>
+<a:CreationDate>1374580798</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581089</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>5</a:Workload>
+<a:Priority>5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>3</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o16">
+<a:ObjectID>AC1DB75E-A1A2-4976-A552-7B82D47424BA</a:ObjectID>
+<a:Requirement.Title>The band can choose to put a shop online</a:Requirement.Title>
+<a:Code>EXG_0013</a:Code>
+<a:CreationDate>1374581089</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581143</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>3.5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o17">
+<a:ObjectID>7FCC9DA8-3E86-44EB-9D88-17F6C734EB29</a:ObjectID>
+<a:Requirement.Title>there must be at least one product in the shop for it to remain online</a:Requirement.Title>
+<a:Code>EXG_0014</a:Code>
+<a:CreationDate>1374581143</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581229</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>1</a:Workload>
+<a:Priority>3.5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o18">
+<a:ObjectID>420C22AA-B0D2-4500-A60D-FC2045B93BA4</a:ObjectID>
+<a:Requirement.Title>The band can choose to remove any product from sale at any time and can choose to close the shop at any time</a:Requirement.Title>
+<a:Code>EXG_0015</a:Code>
+<a:CreationDate>1374581229</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581316</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>1</a:Workload>
+<a:Priority>3.5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o19">
+<a:ObjectID>70C6CE1F-947A-4242-ABC8-B40CA2A48AED</a:ObjectID>
+<a:Requirement.Title>All products must have at least one picture</a:Requirement.Title>
+<a:Code>EXG_0016</a:Code>
+<a:CreationDate>1374581316</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581416</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>3</a:Workload>
+<a:Priority>3.5</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o20">
+<a:ObjectID>4709FF36-21E2-4080-8394-F8C8CA72EEFA</a:ObjectID>
+<a:Requirement.Title>payment methods are credit cards, paypal, or mobile</a:Requirement.Title>
+<a:Code>EXG_0017</a:Code>
+<a:CreationDate>1374581416</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581494</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>3</a:Workload>
+<a:Priority>4</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>3</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o21">
+<a:ObjectID>DE27E196-79D0-4E9B-8B79-EFE36EA7BD10</a:ObjectID>
+<a:Requirement.Title>All comments, contacts and text interaction will be saved in DB</a:Requirement.Title>
+<a:Code>EXG_0018</a:Code>
+<a:CreationDate>1374581494</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581717</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>4</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+<o:Requirement Id="o22">
+<a:ObjectID>6C133CBE-FBCD-40CF-99EB-BA1FC0DCF2E9</a:ObjectID>
+<a:Requirement.Title>Once purchase is done, the purchase informations(email, name, adress, mobile...) will be saved in another table which will be used for promotions</a:Requirement.Title>
+<a:Code>EXG_0019</a:Code>
+<a:CreationDate>1374581717</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1374581813</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Workload>2</a:Workload>
+<a:Priority>4</a:Priority>
+<a:Status>4</a:Status>
+<a:Risk>1</a:Risk>
+<a:VerificationMethod/>
+</o:Requirement>
+</c:Requirements>
+</o:Model>
+</c:Children>
+</o:RootObject>
+
+</Model>
