@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{FCE5F8A3-7C0B-49D9-A65B-B908B215F561}" Label="" LastModificationDate="1374584113" Name="music_band" Objects="5" Symbols="1" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{FCE5F8A3-7C0B-49D9-A65B-B908B215F561}" Label="" LastModificationDate="1375041029" Name="music_band" Objects="6" Symbols="3" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -187,7 +187,7 @@ ConvTablePath=%_HOME%\Fichiers de ressources\Tables de conversion</a:ModelOption
 <a:Code>Diagramme_1</a:Code>
 <a:CreationDate>1374579745</a:CreationDate>
 <a:Creator>Khalid</a:Creator>
-<a:ModificationDate>1374579770</a:ModificationDate>
+<a:ModificationDate>1375008912</a:ModificationDate>
 <a:Modifier>Khalid</a:Modifier>
 <a:DisplayPreferences>[DisplayPreferences]
 
@@ -470,6 +470,20 @@ Shadow=0</a:DisplayPreferences>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontName>Arial,8,N</a:FontName>
 </o:TitleSymbol>
+<o:NoteSymbol Id="o5">
+<a:Text>links from posts to songs...
+
+also put all selling material in a product table
+</a:Text>
+<a:CreationDate>1375008905</a:CreationDate>
+<a:ModificationDate>1375008960</a:ModificationDate>
+<a:Rect>((-35803,7004), (-6152,-5040))</a:Rect>
+<a:TextStyle>4130</a:TextStyle>
+<a:LineColor>16711680</a:LineColor>
+<a:FillColor>16777215</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontName>Arial,8,N</a:FontName>
+</o:NoteSymbol>
 </c:Symbols>
 </o:ProjectDiagram>
 </c:ProjectDiagrams>
@@ -477,44 +491,57 @@ Shadow=0</a:DisplayPreferences>
 <o:ProjectDiagram Ref="o3"/>
 </c:DefaultDiagram>
 <c:ModelsAndFiles>
-<o:ModelDocument Id="o5">
+<o:ModelDocument Id="o6">
 <a:ObjectID>E20B6F0F-83DE-42DE-8114-0FDD8AE748CD</a:ObjectID>
 <a:Name>Exigences_1</a:Name>
 <a:Code>Exigences_1</a:Code>
 <a:CreationDate>1374579863</a:CreationDate>
 <a:Creator>Khalid</a:Creator>
-<a:ModificationDate>1374584113</a:ModificationDate>
+<a:ModificationDate>1374737894</a:ModificationDate>
 <a:Modifier>Khalid</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Exigences_1.mgx</a:Location>
 <a:Extension>mgx</a:Extension>
 <a:ModelDocument.ModelID>BC7DF71E-D9A5-4F56-9220-7770591DCCF4</a:ModelDocument.ModelID>
 <a:ModelClassID>DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o6">
+<o:ModelDocument Id="o7">
 <a:ObjectID>1F77864B-1A4C-479E-9BEA-856E0176CAFF</a:ObjectID>
 <a:Name>Diagramme de technologie_1</a:Name>
 <a:Code>Diagramme_de_technologie_1</a:Code>
 <a:CreationDate>1374583680</a:CreationDate>
 <a:Creator>Khalid</a:Creator>
-<a:ModificationDate>1374584063</a:ModificationDate>
+<a:ModificationDate>1374737899</a:ModificationDate>
 <a:Modifier>Khalid</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Diagramme de technologie_1.mae</a:Location>
 <a:Extension>mae</a:Extension>
 <a:ModelDocument.ModelID>A00AFE45-F2CB-4DD5-A7CF-6A6D5C3447E9</a:ModelDocument.ModelID>
 <a:ModelClassID>5215C79E-A9A1-4738-A627-36DA432EFE29</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o7">
+<o:ModelDocument Id="o8">
 <a:ObjectID>840B5446-528B-4362-B331-BCC3C495B83F</a:ObjectID>
 <a:Name>Diagramme d&#39;organisation_1</a:Name>
 <a:Code>Diagramme_d_organisation_1</a:Code>
 <a:CreationDate>1374583853</a:CreationDate>
 <a:Creator>Khalid</a:Creator>
-<a:ModificationDate>1374584046</a:ModificationDate>
+<a:ModificationDate>1374737901</a:ModificationDate>
 <a:Modifier>Khalid</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Diagramme d&#39;organisation_1.mae</a:Location>
 <a:Extension>mae</a:Extension>
 <a:ModelDocument.ModelID>DA8087C5-727D-49E5-BD6C-C0B9FFE0A3C1</a:ModelDocument.ModelID>
 <a:ModelClassID>5215C79E-A9A1-4738-A627-36DA432EFE29</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o9">
+<a:ObjectID>ECD14C60-F7A4-4633-82A7-A9ECD756665D</a:ObjectID>
+<a:Name>Données conceptuelles_final</a:Name>
+<a:Code>donnees_conceptuelles_final</a:Code>
+<a:CreationDate>1375007966</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1375041065</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/Données conceptuelles_final.mcd</a:Location>
+<a:Extension>mcd</a:Extension>
+<a:ModelDocument.ModelID>6A4026EA-EFFA-4080-81E3-DC9599BBAFB7</a:ModelDocument.ModelID>
+<a:ModelClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>
 </o:Project>
