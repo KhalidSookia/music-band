@@ -1,7 +1,3 @@
-drop schema if exists band;
-create schema if not exists band;
-use band;
-
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
 /* Date de création :  30/07/2013 18:24:06                      */
@@ -458,7 +454,7 @@ create table purchases
    id_inv               int not null,
    id_v                 int not null,
    id_pr                int not null,
-   qty                  numeric(10,0) not null,
+   qty                  numeric(100,0) not null,
    active18             bool not null,
    created_at17         timestamp not null,
    updated_at17         timestamp not null,
