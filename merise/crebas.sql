@@ -668,6 +668,9 @@ ALTER TABLE posts add CONSTRAINT FK_pos_prod FOREIGN KEY (id_prod)
 ALTER TABLE prices_history add CONSTRAINT FK_pr_history FOREIGN KEY (id_prod)
       REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
+-- ALTER TABLE `band`.`prices_history` DROP FOREIGN KEY `FK_pr_history`;
+
+
 ALTER TABLE prod_pic add CONSTRAINT FK_prod_pic FOREIGN KEY (id_prod)
       REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
@@ -739,32 +742,6 @@ ALTER TABLE vats add CONSTRAINT FK_w_v FOREIGN KEY (id_w)
 
 
 
-INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
-('Others', 1, NOW(), NOW());
-
-INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
-('Songs', 1, NOW(), NOW());
-
-INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
-('Albums', 1, NOW(), NOW());
-
-INSERT INTO access(level, active3, created_at3, updated_at3) VALUES
-('Main', 1 , NOW(), NOW()),
-('Super', 1 , NOW(), NOW()),
-('Admin', 1 , NOW(), NOW()),
-('User', 1 , NOW(), NOW());
-
-
-INSERT INTO languages(language, active4, created_at4, updated_at4) VALUES
-('English', 1, NOW(), NOW()),
-('Français', 1, NOW(), NOW()),
-('Spanish', 1, NOW(), NOW());
-
-
-INSERT INTO styles(style, active12, created_at11, updated_at11) VALUES
-('Rap', 1,NOW(), NOW()),
-('Rock', 1,NOW(), NOW());
-
 
 
 -- -----------------------------------------------------------------------------------------------
@@ -776,7 +753,7 @@ INSERT INTO styles(style, active12, created_at11, updated_at11) VALUES
 
 DELIMITER $$
 DROP TRIGGER IF EXISTS price_insert $$
-CREATE TRIGGER price_insert BEFORE INSERT
+CREATE TRIGGER price_insert AFTER INSERT
 ON products
 FOR EACH ROW
 BEGIN
