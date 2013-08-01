@@ -1,682 +1,762 @@
-drop schema if exists band;
-create schema if not exists band;
-use band;
+DROP SCHEMA IF EXISTS band;
+CREATE SCHEMA IF NOT EXISTS band;
+USE band;
+
 
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  30/07/2013 18:24:06                      */
+/* DATE de création :  01/08/2013 03:37:24                      */
 /*==============================================================*/
 
 
-drop table if exists access;
+DROP TABLE IF EXISTS access;
 
-drop table if exists actions;
+DROP TABLE IF EXISTS actions;
 
-drop table if exists al_s;
+DROP TABLE IF EXISTS al_s;
 
-drop table if exists albums;
+DROP TABLE IF EXISTS albums;
 
-drop table if exists c_l;
+DROP TABLE IF EXISTS c_l;
 
-drop table if exists categories;
+DROP TABLE IF EXISTS categories;
 
-drop table if exists countries;
+DROP TABLE IF EXISTS cities;
 
-drop table if exists emails;
+DROP TABLE IF EXISTS city_in_country;
 
-drop table if exists i_e;
+DROP TABLE IF EXISTS countries;
 
-drop table if exists i_pic;
+DROP TABLE IF EXISTS emails;
 
-drop table if exists i_prod;
+DROP TABLE IF EXISTS i_e;
 
-drop table if exists i_r_m;
+DROP TABLE IF EXISTS i_pic;
 
-drop table if exists i_w;
+DROP TABLE IF EXISTS i_prod;
 
-drop table if exists individuals;
+DROP TABLE IF EXISTS i_r_m;
 
-drop table if exists invoices;
+DROP TABLE IF EXISTS i_w;
 
-drop table if exists languages;
+DROP TABLE IF EXISTS individuals;
 
-drop table if exists messages;
+DROP TABLE IF EXISTS invoices;
 
-drop table if exists others;
+DROP TABLE IF EXISTS languages;
 
-drop table if exists passwords;
+DROP TABLE IF EXISTS messages;
 
-drop table if exists payments;
+DROP TABLE IF EXISTS others;
 
-drop table if exists photos;
+DROP TABLE IF EXISTS passwords;
 
-drop table if exists playlists;
+DROP TABLE IF EXISTS payments;
 
-drop table if exists posts;
+DROP TABLE IF EXISTS photos;
 
-drop table if exists prices_history;
+DROP TABLE IF EXISTS playlists;
 
-drop table if exists prod_pic;
+DROP TABLE IF EXISTS posts;
 
-drop table if exists prod_pla;
+DROP TABLE IF EXISTS prices_history;
 
-drop table if exists prod_pur;
+DROP TABLE IF EXISTS prod_pic;
 
-drop table if exists prod_v;
+DROP TABLE IF EXISTS prod_pla;
 
-drop table if exists products;
+DROP TABLE IF EXISTS prod_pur;
 
-drop table if exists purchases;
+DROP TABLE IF EXISTS prod_v;
 
-drop table if exists so_s;
+DROP TABLE IF EXISTS products;
 
-drop table if exists song_in_album;
+DROP TABLE IF EXISTS purchases;
 
-drop table if exists songs;
+DROP TABLE IF EXISTS so_s;
 
-drop table if exists styles;
+DROP TABLE IF EXISTS song_in_album;
 
-drop table if exists vats;
+DROP TABLE IF EXISTS songs;
 
-drop table if exists websites;
+DROP TABLE IF EXISTS styles;
+
+DROP TABLE IF EXISTS vats;
+
+DROP TABLE IF EXISTS websites;
 
 /*==============================================================*/
-/* Table : access                                               */
+/* TABLE : access                                               */
 /*==============================================================*/
-create table access
+CREATE TABLE access
 (
-   id_a                 int not null auto_increment,
-   level                varchar(50) not null,
-   active3              bool not null,
-   created_at3          timestamp not null,
-   updated_at3          timestamp not null,
-   primary key (id_a)
+   id_a                 INT NOT NULL AUTO_INCREMENT,
+   level                VARCHAR(50) NOT NULL,
+   active3              BOOL NOT NULL,
+   created_at3          TIMESTAMP NOT NULL,
+   updated_at3          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_a)
 );
 
 /*==============================================================*/
-/* Table : actions                                              */
+/* TABLE : actions                                              */
 /*==============================================================*/
-create table actions
+CREATE TABLE actions
 (
-   id_act               int not null auto_increment,
-   id_i                 int not null,
-   id_prod              int not null,
-   type                 varchar(50) not null,
-   active21             bool not null,
-   created_at20         timestamp not null,
-   updated_at20         timestamp not null,
-   primary key (id_act)
+   id_act               INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   id_prod              INT NOT NULL,
+   type                 VARCHAR(50) NOT NULL,
+   active21             BOOL NOT NULL,
+   created_at20         TIMESTAMP NOT NULL,
+   updated_at20         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_act)
 );
 
 /*==============================================================*/
-/* Table : al_s                                                 */
+/* TABLE : al_s                                                 */
 /*==============================================================*/
-create table al_s
+CREATE TABLE al_s
 (
-   id_prod              int not null,
-   id_s                 int not null,
-   primary key (id_prod, id_s)
+   id_prod              INT NOT NULL,
+   id_s                 INT NOT NULL,
+   PRIMARY KEY (id_prod, id_s)
 );
 
 /*==============================================================*/
-/* Table : albums                                               */
+/* TABLE : albums                                               */
 /*==============================================================*/
-create table albums
+CREATE TABLE albums
 (
-   id_prod              int not null,
-   name_al              varchar(253) not null,
-   num_titles           smallint not null,
-   length2              time not null,
-   primary key (id_prod)
+   id_prod              INT NOT NULL,
+   name_al              VARCHAR(253) NOT NULL,
+   num_titles           SMALLINT NOT NULL,
+   length2              TIME NOT NULL,
+   PRIMARY KEY (id_prod)
 );
 
 /*==============================================================*/
-/* Table : c_l                                                  */
+/* TABLE : c_l                                                  */
 /*==============================================================*/
-create table c_l
+CREATE TABLE c_l
 (
-   id_c                 int not null,
-   id_l                 int not null,
-   primary key (id_c, id_l)
+   id_c                 INT NOT NULL,
+   id_l                 INT NOT NULL,
+   PRIMARY KEY (id_c, id_l)
 );
 
 /*==============================================================*/
-/* Table : categories                                           */
+/* TABLE : categories                                           */
 /*==============================================================*/
-create table categories
+CREATE TABLE categories
 (
-   id_cat               int not null auto_increment,
-   categorie            varchar(50) not null,
-   active13             bool not null,
-   created_at12         timestamp not null,
-   updated_at12         timestamp not null,
-   primary key (id_cat)
+   id_cat               INT NOT NULL AUTO_INCREMENT,
+   categorie            VARCHAR(50) NOT NULL,
+   active13             BOOL NOT NULL,
+   created_at12         TIMESTAMP NOT NULL,
+   updated_at12         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_cat)
 );
 
 /*==============================================================*/
-/* Table : countries                                            */
+/* TABLE : cities                                               */
 /*==============================================================*/
-create table countries
+CREATE TABLE cities
 (
-   id_c                 int not null auto_increment,
-   name_c               varchar(50) not null,
-   code                 varchar(7) not null,
-   active5              bool not null,
-   primary key (id_c)
+   id_ci                INT NOT NULL AUTO_INCREMENT,
+   c_iso2               CHAR(2) NOT NULL,
+   ci_name              VARCHAR(100) NOT NULL,
+   PRIMARY KEY (id_ci)
 );
 
 /*==============================================================*/
-/* Table : emails                                               */
+/* TABLE : city_in_country                                      */
 /*==============================================================*/
-create table emails
+CREATE TABLE city_in_country
 (
-   id_e                 int not null auto_increment,
-   email2               varchar(253) not null,
-   active7              bool not null,
-   created_at6          timestamp not null,
-   updated_at6          timestamp not null,
-   primary key (id_e)
+   id_ci                INT NOT NULL,
+   id_c                 INT NOT NULL,
+   PRIMARY KEY (id_ci, id_c)
 );
 
 /*==============================================================*/
-/* Table : i_e                                                  */
+/* TABLE : countries                                            */
 /*==============================================================*/
-create table i_e
+CREATE TABLE countries
 (
-   id_e                 int not null,
-   id_i                 int not null,
-   primary key (id_e, id_i)
+   id_c                 INT NOT NULL AUTO_INCREMENT,
+   iso2                 CHAR(2) NOT NULL,
+   short_name           VARCHAR(50) NOT NULL,
+   long_name            VARCHAR(50) NOT NULL,
+   iso3                 CHAR(3) NOT NULL,
+   numcode              CHAR(3) NOT NULL,
+   un_member            VARCHAR(6) NOT NULL,
+   calling_code         VARCHAR(5) NOT NULL,
+   cctld                VARCHAR(4) NOT NULL,
+   code                 VARCHAR(7) NOT NULL,
+   active               BOOL NOT NULL,
+   created_at           TIMESTAMP NOT NULL,
+   updated_at           TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_c)
 );
 
 /*==============================================================*/
-/* Table : i_pic                                                */
+/* TABLE : emails                                               */
 /*==============================================================*/
-create table i_pic
+CREATE TABLE emails
 (
-   id_pic               int not null,
-   id_i                 int not null,
-   primary key (id_pic, id_i)
+   id_e                 INT NOT NULL AUTO_INCREMENT,
+   email2               VARCHAR(253) NOT NULL,
+   active7              BOOL NOT NULL,
+   created_at6          TIMESTAMP NOT NULL,
+   updated_at6          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_e)
 );
 
 /*==============================================================*/
-/* Table : i_prod                                               */
+/* TABLE : i_e                                                  */
 /*==============================================================*/
-create table i_prod
+CREATE TABLE i_e
 (
-   id_prod              int not null,
-   id_i                 int not null,
-   primary key (id_prod, id_i)
+   id_e                 INT NOT NULL,
+   id_i                 INT NOT NULL,
+   PRIMARY KEY (id_e, id_i)
 );
 
 /*==============================================================*/
-/* Table : i_r_m                                                */
+/* TABLE : i_pic                                                */
 /*==============================================================*/
-create table i_r_m
+CREATE TABLE i_pic
 (
-   id_m                 int not null,
-   id_i                 int not null,
-   primary key (id_m, id_i)
+   id_pic               INT NOT NULL,
+   id_i                 INT NOT NULL,
+   PRIMARY KEY (id_pic, id_i)
 );
 
 /*==============================================================*/
-/* Table : i_w                                                  */
+/* TABLE : i_prod                                               */
 /*==============================================================*/
-create table i_w
+CREATE TABLE i_prod
 (
-   id_w                 int not null,
-   id_i                 int not null,
-   primary key (id_w, id_i)
+   id_prod              INT NOT NULL,
+   id_i                 INT NOT NULL,
+   PRIMARY KEY (id_prod, id_i)
 );
 
 /*==============================================================*/
-/* Table : individuals                                          */
+/* TABLE : i_r_m                                                */
 /*==============================================================*/
-create table individuals
+CREATE TABLE i_r_m
 (
-   id_i                 int not null auto_increment,
-   id_c                 int not null,
-   id_a                 int not null,
-   id_l                 int not null,
-   pseudo               varchar(253) not null,
-   surname              varchar(25) not null,
-   name                 varchar(50) not null,
-   email                varchar(253) not null,
-   mobile               varchar(25),
-   dob                  date,
-   verified             bool not null,
-   active               bool not null,
-   created_at           timestamp not null,
-   updated_at           timestamp not null,
-   primary key (id_i)
+   id_m                 INT NOT NULL,
+   id_i                 INT NOT NULL,
+   PRIMARY KEY (id_m, id_i)
 );
 
 /*==============================================================*/
-/* Table : invoices                                             */
+/* TABLE : i_w                                                  */
 /*==============================================================*/
-create table invoices
+CREATE TABLE i_w
 (
-   id_inv               int not null auto_increment,
-   id_pay               int not null,
-   tot                  decimal(10,4) not null,
-   vat2                 decimal(10,4) not null,
-   tot_vat              decimal(10,4) not null,
-   active17             bool not null,
-   created_at16         timestamp not null,
-   updated_at16         timestamp not null,
-   primary key (id_inv)
+   id_w                 INT NOT NULL,
+   id_i                 INT NOT NULL,
+   PRIMARY KEY (id_w, id_i)
 );
 
 /*==============================================================*/
-/* Table : languages                                            */
+/* TABLE : individuals                                          */
 /*==============================================================*/
-create table languages
+CREATE TABLE individuals
 (
-   id_l                 int not null auto_increment,
-   language             varchar(25) not null,
-   active4              bool not null,
-   created_at4          timestamp not null,
-   updated_at4          timestamp not null,
-   primary key (id_l)
+   id_i                 INT NOT NULL AUTO_INCREMENT,
+   id_c                 INT NOT NULL,
+   id_a                 INT NOT NULL,
+   id_ci                INT NOT NULL,
+   id_l                 INT NOT NULL,
+   pseudo               VARCHAR(253) NOT NULL,
+   surname              VARCHAR(25) NOT NULL,
+   name                 VARCHAR(50) NOT NULL,
+   email                VARCHAR(253) NOT NULL,
+   mobile               VARCHAR(25),
+   dob                  DATE,
+   verified             BOOL NOT NULL,
+   active               BOOL NOT NULL,
+   created_at           TIMESTAMP NOT NULL,
+   updated_at           TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_i)
 );
 
 /*==============================================================*/
-/* Table : messages                                             */
+/* TABLE : invoices                                             */
 /*==============================================================*/
-create table messages
+CREATE TABLE invoices
 (
-   id_m                 int not null auto_increment,
-   id_i                 int not null,
-   subject              varchar(253) not null,
-   message              text not null,
-   active6              bool not null,
-   created_at5          timestamp not null,
-   updated_at5          timestamp not null,
-   primary key (id_m)
+   id_inv               INT NOT NULL AUTO_INCREMENT,
+   id_pay               INT NOT NULL,
+   tot                  DECIMAL(10,4) NOT NULL,
+   vat2                 DECIMAL(10,4) NOT NULL,
+   tot_vat              DECIMAL(10,4) NOT NULL,
+   active17             BOOL NOT NULL,
+   created_at16         TIMESTAMP NOT NULL,
+   updated_at16         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_inv)
 );
 
 /*==============================================================*/
-/* Table : others                                               */
+/* TABLE : languages                                            */
 /*==============================================================*/
-create table others
+CREATE TABLE languages
 (
-   id_prod              int not null,
-   name                 varchar(50) not null,
-   primary key (id_prod)
+   id_l                 INT NOT NULL AUTO_INCREMENT,
+   language             VARCHAR(25) NOT NULL,
+   active4              BOOL NOT NULL,
+   created_at4          TIMESTAMP NOT NULL,
+   updated_at4          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_l)
 );
 
 /*==============================================================*/
-/* Table : passwords                                            */
+/* TABLE : messages                                             */
 /*==============================================================*/
-create table passwords
+CREATE TABLE messages
 (
-   id_p                 int not null auto_increment,
-   id_i                 int not null,
-   salt                 varchar(25) not null,
-   password             varchar(50) not null,
-   trials               smallint not null,
-   active2              bool not null,
-   created_at2          timestamp not null,
-   updated_at2          timestamp not null,
-   primary key (id_p)
+   id_m                 INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   subject              VARCHAR(253) NOT NULL,
+   message              TEXT NOT NULL,
+   active6              BOOL NOT NULL,
+   created_at5          TIMESTAMP NOT NULL,
+   updated_at5          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_m)
 );
 
 /*==============================================================*/
-/* Table : payments                                             */
+/* TABLE : others                                               */
 /*==============================================================*/
-create table payments
+CREATE TABLE others
 (
-   id_pay               int not null auto_increment,
-   id_i                 int not null,
-   method               varchar(50) not null,
-   validity             date not null,
-   active19             bool not null,
-   created_at18         timestamp not null,
-   updated_at18         timestamp not null,
-   primary key (id_pay)
+   id_prod              INT NOT NULL,
+   name                 VARCHAR(50) NOT NULL,
+   PRIMARY KEY (id_prod)
 );
 
 /*==============================================================*/
-/* Table : photos                                               */
+/* TABLE : passwords                                            */
 /*==============================================================*/
-create table photos
+CREATE TABLE passwords
 (
-   id_pic               int not null auto_increment,
-   name_pic             varchar(250) not null,
-   ext                  varchar(5) not null,
-   main                 bool not null,
-   path2                varchar(250) not null,
-   active14             bool not null,
-   created_at13         timestamp not null,
-   updated_at13         timestamp not null,
-   primary key (id_pic)
+   id_p                 INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   salt                 VARCHAR(25) NOT NULL,
+   password             VARCHAR(50) NOT NULL,
+   trials               SMALLINT NOT NULL,
+   active2              BOOL NOT NULL,
+   created_at2          TIMESTAMP NOT NULL,
+   updated_at2          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_p)
 );
 
 /*==============================================================*/
-/* Table : playlists                                            */
+/* TABLE : payments                                             */
 /*==============================================================*/
-create table playlists
+CREATE TABLE payments
 (
-   id_pla               int not null auto_increment,
-   id_i                 int not null,
-   position             smallint not null,
-   active20             bool not null,
-   created_at19         timestamp not null,
-   updated_at19         timestamp not null,
-   primary key (id_pla)
+   id_pay               INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   method               VARCHAR(50) NOT NULL,
+   validity             DATE NOT NULL,
+   active19             BOOL NOT NULL,
+   created_at18         TIMESTAMP NOT NULL,
+   updated_at18         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pay)
 );
 
 /*==============================================================*/
-/* Table : posts                                                */
+/* TABLE : photos                                               */
 /*==============================================================*/
-create table posts
+CREATE TABLE photos
 (
-   id_pos               int not null auto_increment,
-   id_prod              int not null,
-   id_i                 int not null,
-   post                 text not null,
-   active22             bool not null,
-   created_at21         timestamp not null,
-   updated_at21         timestamp not null,
-   primary key (id_pos)
+   id_pic               INT NOT NULL AUTO_INCREMENT,
+   name_pic             VARCHAR(250) NOT NULL,
+   ext                  VARCHAR(5) NOT NULL,
+   main                 BOOL NOT NULL,
+   path2                VARCHAR(250) NOT NULL,
+   active14             BOOL NOT NULL,
+   created_at13         TIMESTAMP NOT NULL,
+   updated_at13         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pic)
 );
 
 /*==============================================================*/
-/* Table : prices_history                                       */
+/* TABLE : playlists                                            */
 /*==============================================================*/
-create table prices_history
+CREATE TABLE playlists
 (
-   id_pr                int not null auto_increment,
-   id_prod              int not null,
-   price                decimal(10,4) not null,
-   active15             bool not null,
-   created_at14         timestamp not null,
-   updated_at14         timestamp not null,
-   primary key (id_pr)
+   id_pla               INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   position             SMALLINT NOT NULL,
+   active20             BOOL NOT NULL,
+   created_at19         TIMESTAMP NOT NULL,
+   updated_at19         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pla)
 );
 
 /*==============================================================*/
-/* Table : prod_pic                                             */
+/* TABLE : posts                                                */
 /*==============================================================*/
-create table prod_pic
+CREATE TABLE posts
 (
-   id_prod              int not null,
-   id_pic               int not null,
-   primary key (id_prod, id_pic)
+   id_pos               INT NOT NULL AUTO_INCREMENT,
+   id_prod              INT NOT NULL,
+   id_i                 INT NOT NULL,
+   post                 TEXT NOT NULL,
+   active22             BOOL NOT NULL,
+   created_at21         TIMESTAMP NOT NULL,
+   updated_at21         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pos)
 );
 
 /*==============================================================*/
-/* Table : prod_pla                                             */
+/* TABLE : prices_history                                       */
 /*==============================================================*/
-create table prod_pla
+CREATE TABLE prices_history
 (
-   id_prod              int not null,
-   id_pla               int not null,
-   primary key (id_prod, id_pla)
+   id_pr                INT NOT NULL AUTO_INCREMENT,
+   id_prod              INT NOT NULL,
+   price                DECIMAL(10,4) NOT NULL,
+   active15             BOOL NOT NULL,
+   created_at14         TIMESTAMP NOT NULL,
+   updated_at14         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pr)
 );
 
 /*==============================================================*/
-/* Table : prod_pur                                             */
+/* TABLE : prod_pic                                             */
 /*==============================================================*/
-create table prod_pur
+CREATE TABLE prod_pic
 (
-   id_pur               int not null,
-   id_prod              int not null,
-   primary key (id_pur, id_prod)
+   id_prod              INT NOT NULL,
+   id_pic               INT NOT NULL,
+   PRIMARY KEY (id_prod, id_pic)
 );
 
 /*==============================================================*/
-/* Table : prod_v                                               */
+/* TABLE : prod_pla                                             */
 /*==============================================================*/
-create table prod_v
+CREATE TABLE prod_pla
 (
-   id_prod              int not null,
-   id_v                 int not null,
-   primary key (id_prod, id_v)
+   id_prod              INT NOT NULL,
+   id_pla               INT NOT NULL,
+   PRIMARY KEY (id_prod, id_pla)
 );
 
 /*==============================================================*/
-/* Table : products                                             */
+/* TABLE : prod_pur                                             */
 /*==============================================================*/
-create table products
+CREATE TABLE prod_pur
 (
-   id_prod              int not null auto_increment,
-   id_cat               int not null,
-   price                decimal(10,4) not null,
-   active11             bool not null,
-   created_at10         timestamp not null,
-   updated_at10         timestamp not null,
-   primary key (id_prod)
+   id_pur               INT NOT NULL,
+   id_prod              INT NOT NULL,
+   PRIMARY KEY (id_pur, id_prod)
 );
 
 /*==============================================================*/
-/* Table : purchases                                            */
+/* TABLE : prod_v                                               */
 /*==============================================================*/
-create table purchases
+CREATE TABLE prod_v
 (
-   id_pur               int not null auto_increment,
-   id_i                 int not null,
-   id_inv               int not null,
-   id_v                 int not null,
-   id_pr                int not null,
-   qty                  numeric(10,0) not null,
-   active18             bool not null,
-   created_at17         timestamp not null,
-   updated_at17         timestamp not null,
-   primary key (id_pur)
+   id_prod              INT NOT NULL,
+   id_v                 INT NOT NULL,
+   PRIMARY KEY (id_prod, id_v)
 );
 
 /*==============================================================*/
-/* Table : so_s                                                 */
+/* TABLE : products                                             */
 /*==============================================================*/
-create table so_s
+CREATE TABLE products
 (
-   id_prod              int not null,
-   id_s                 int not null,
-   primary key (id_prod, id_s)
+   id_prod              INT NOT NULL AUTO_INCREMENT,
+   id_cat               INT NOT NULL,
+   price                DECIMAL(10,4) NOT NULL,
+   active11             BOOL NOT NULL,
+   created_at10         TIMESTAMP NOT NULL,
+   updated_at10         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_prod)
 );
 
 /*==============================================================*/
-/* Table : song_in_album                                        */
+/* TABLE : purchases                                            */
 /*==============================================================*/
-create table song_in_album
+CREATE TABLE purchases
 (
-   id_prod_so           int not null,
-   id_prod_al           int not null,
-   primary key (id_prod_so, id_prod_al)
+   id_pur               INT NOT NULL AUTO_INCREMENT,
+   id_i                 INT NOT NULL,
+   id_inv               INT NOT NULL,
+   id_v                 INT NOT NULL,
+   id_pr                INT NOT NULL,
+   qty                  NUMERIC(10,0) NOT NULL,
+   active18             BOOL NOT NULL,
+   created_at17         TIMESTAMP NOT NULL,
+   updated_at17         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_pur)
 );
 
 /*==============================================================*/
-/* Table : songs                                                */
+/* TABLE : so_s                                                 */
 /*==============================================================*/
-create table songs
+CREATE TABLE so_s
 (
-   id_prod              int not null,
-   title                varchar(253) not null,
-   length               time not null,
-   primary key (id_prod)
+   id_prod              INT NOT NULL,
+   id_s                 INT NOT NULL,
+   PRIMARY KEY (id_prod, id_s)
 );
 
 /*==============================================================*/
-/* Table : styles                                               */
+/* TABLE : song_in_album                                        */
 /*==============================================================*/
-create table styles
+CREATE TABLE song_in_album
 (
-   id_s                 int not null auto_increment,
-   style                varchar(50) not null,
-   active12             bool not null,
-   created_at11         timestamp not null,
-   updated_at11         timestamp not null,
-   primary key (id_s)
+   id_prod_so           INT NOT NULL,
+   id_prod_al           INT NOT NULL,
+   PRIMARY KEY (id_prod_so, id_prod_al)
 );
 
 /*==============================================================*/
-/* Table : vats                                                 */
+/* TABLE : songs                                                */
 /*==============================================================*/
-create table vats
+CREATE TABLE songs
 (
-   id_v                 int not null auto_increment,
-   id_w                 int not null,
-   vat                  decimal(10,4) not null,
-   active16             bool not null,
-   created_at15         timestamp not null,
-   updated_at15         timestamp not null,
-   primary key (id_v)
+   id_prod              INT NOT NULL,
+   title                VARCHAR(253) NOT NULL,
+   length               TIME NOT NULL,
+   PRIMARY KEY (id_prod)
 );
 
 /*==============================================================*/
-/* Table : websites                                             */
+/* TABLE : styles                                               */
 /*==============================================================*/
-create table websites
+CREATE TABLE styles
 (
-   id_w                 int not null auto_increment,
-   path                 varchar(250) not null,
-   active8              bool not null,
-   created_at7          timestamp not null,
-   updated_at7          timestamp not null,
-   primary key (id_w)
+   id_s                 INT NOT NULL AUTO_INCREMENT,
+   style                VARCHAR(50) NOT NULL,
+   active12             BOOL NOT NULL,
+   created_at11         TIMESTAMP NOT NULL,
+   updated_at11         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_s)
 );
 
-alter table actions add constraint fk_act_prod foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+/*==============================================================*/
+/* TABLE : vats                                                 */
+/*==============================================================*/
+CREATE TABLE vats
+(
+   id_v                 INT NOT NULL AUTO_INCREMENT,
+   id_w                 INT NOT NULL,
+   vat                  DECIMAL(10,4) NOT NULL,
+   active16             BOOL NOT NULL,
+   created_at15         TIMESTAMP NOT NULL,
+   updated_at15         TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_v)
+);
 
-alter table actions add constraint fk_i_act foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+/*==============================================================*/
+/* TABLE : websites                                             */
+/*==============================================================*/
+CREATE TABLE websites
+(
+   id_w                 INT NOT NULL AUTO_INCREMENT,
+   path                 VARCHAR(250) NOT NULL,
+   active8              BOOL NOT NULL,
+   created_at7          TIMESTAMP NOT NULL,
+   updated_at7          TIMESTAMP NOT NULL,
+   PRIMARY KEY (id_w)
+);
 
-alter table al_s add constraint fk_al_s foreign key (id_prod)
-      references albums (id_prod) on delete restrict on update restrict;
+ALTER TABLE actions add CONSTRAINT FK_act_prod FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table al_s add constraint fk_al_s2 foreign key (id_s)
-      references styles (id_s) on delete restrict on update restrict;
+ALTER TABLE actions add CONSTRAINT FK_i_act FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table albums add constraint fk_heritage_2 foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE al_s add CONSTRAINT FK_al_s FOREIGN KEY (id_prod)
+      REFERENCES albums (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table c_l add constraint fk_c_l foreign key (id_c)
-      references countries (id_c) on delete restrict on update restrict;
+ALTER TABLE al_s add CONSTRAINT FK_al_s2 FOREIGN KEY (id_s)
+      REFERENCES styles (id_s) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table c_l add constraint fk_c_l2 foreign key (id_l)
-      references languages (id_l) on delete restrict on update restrict;
+ALTER TABLE albums add CONSTRAINT FK_heritage_2 FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_e add constraint fk_i_e foreign key (id_e)
-      references emails (id_e) on delete restrict on update restrict;
+ALTER TABLE c_l add CONSTRAINT FK_c_l FOREIGN KEY (id_c)
+      REFERENCES countries (id_c) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_e add constraint fk_i_e2 foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE c_l add CONSTRAINT FK_c_l2 FOREIGN KEY (id_l)
+      REFERENCES languages (id_l) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_pic add constraint fk_i_pic foreign key (id_pic)
-      references photos (id_pic) on delete restrict on update restrict;
+ALTER TABLE city_in_country add CONSTRAINT FK_city_in_country FOREIGN KEY (id_ci)
+      REFERENCES cities (id_ci) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_pic add constraint fk_i_pic2 foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE city_in_country add CONSTRAINT FK_city_in_country2 FOREIGN KEY (id_c)
+      REFERENCES countries (id_c) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_prod add constraint fk_i_prod foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE i_e add CONSTRAINT FK_i_e FOREIGN KEY (id_e)
+      REFERENCES emails (id_e) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_prod add constraint fk_i_prod2 foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE i_e add CONSTRAINT FK_i_e2 FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_r_m add constraint fk_i_r_m foreign key (id_m)
-      references messages (id_m) on delete restrict on update restrict;
+ALTER TABLE i_pic add CONSTRAINT FK_i_pic FOREIGN KEY (id_pic)
+      REFERENCES photos (id_pic) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_r_m add constraint fk_i_r_m2 foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE i_pic add CONSTRAINT FK_i_pic2 FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_w add constraint fk_i_w foreign key (id_w)
-      references websites (id_w) on delete restrict on update restrict;
+ALTER TABLE i_prod add CONSTRAINT FK_i_prod FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table i_w add constraint fk_i_w2 foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE i_prod add CONSTRAINT FK_i_prod2 FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table individuals add constraint fk_i_a foreign key (id_a)
-      references access (id_a) on delete restrict on update restrict;
+ALTER TABLE i_r_m add CONSTRAINT FK_i_r_m FOREIGN KEY (id_m)
+      REFERENCES messages (id_m) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table individuals add constraint fk_i_c foreign key (id_c)
-      references countries (id_c) on delete restrict on update restrict;
+ALTER TABLE i_r_m add CONSTRAINT FK_i_r_m2 FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table individuals add constraint fk_i_l foreign key (id_l)
-      references languages (id_l) on delete restrict on update restrict;
+ALTER TABLE i_w add CONSTRAINT FK_i_w FOREIGN KEY (id_w)
+      REFERENCES websites (id_w) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table invoices add constraint fk_pay_pur foreign key (id_pay)
-      references payments (id_pay) on delete restrict on update restrict;
+ALTER TABLE i_w add CONSTRAINT FK_i_w2 FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table messages add constraint fk_i_s_m foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE individuals add CONSTRAINT FK_i_a FOREIGN KEY (id_a)
+      REFERENCES access (id_a) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table others add constraint fk_heritage_3 foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE individuals add CONSTRAINT FK_i_c FOREIGN KEY (id_c)
+      REFERENCES countries (id_c) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table passwords add constraint fk_i_p foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE individuals add CONSTRAINT FK_i_ci FOREIGN KEY (id_ci)
+      REFERENCES cities (id_ci) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table payments add constraint fk_i_pay foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE individuals add CONSTRAINT FK_i_l FOREIGN KEY (id_l)
+      REFERENCES languages (id_l) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table playlists add constraint fk_i_pla foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE invoices add CONSTRAINT FK_pay_pur FOREIGN KEY (id_pay)
+      REFERENCES payments (id_pay) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table posts add constraint fk_i_pos foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE messages add CONSTRAINT FK_i_s_m FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table posts add constraint fk_pos_prod foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE others add CONSTRAINT FK_heritage_3 FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prices_history add constraint fk_pr_history foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE passwords add CONSTRAINT FK_i_p FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pic add constraint fk_prod_pic foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE payments add CONSTRAINT FK_i_pay FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pic add constraint fk_prod_pic2 foreign key (id_pic)
-      references photos (id_pic) on delete restrict on update restrict;
+ALTER TABLE playlists add CONSTRAINT FK_i_pla FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pla add constraint fk_prod_pla foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE posts add CONSTRAINT FK_i_pos FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pla add constraint fk_prod_pla2 foreign key (id_pla)
-      references playlists (id_pla) on delete restrict on update restrict;
+ALTER TABLE posts add CONSTRAINT FK_pos_prod FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pur add constraint fk_prod_pur foreign key (id_pur)
-      references purchases (id_pur) on delete restrict on update restrict;
+ALTER TABLE prices_history add CONSTRAINT FK_pr_history FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_pur add constraint fk_prod_pur2 foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE prod_pic add CONSTRAINT FK_prod_pic FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_v add constraint fk_prod_v foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE prod_pic add CONSTRAINT FK_prod_pic2 FOREIGN KEY (id_pic)
+      REFERENCES photos (id_pic) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table prod_v add constraint fk_prod_v2 foreign key (id_v)
-      references vats (id_v) on delete restrict on update restrict;
+ALTER TABLE prod_pla add CONSTRAINT FK_prod_pla FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table products add constraint fk_prod_cat foreign key (id_cat)
-      references categories (id_cat) on delete restrict on update restrict;
+ALTER TABLE prod_pla add CONSTRAINT FK_prod_pla2 FOREIGN KEY (id_pla)
+      REFERENCES playlists (id_pla) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table purchases add constraint fk_i_pur foreign key (id_i)
-      references individuals (id_i) on delete restrict on update restrict;
+ALTER TABLE prod_pur add CONSTRAINT FK_prod_pur FOREIGN KEY (id_pur)
+      REFERENCES purchases (id_pur) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table purchases add constraint fk_pur_pr foreign key (id_pr)
-      references prices_history (id_pr) on delete restrict on update restrict;
+ALTER TABLE prod_pur add CONSTRAINT FK_prod_pur2 FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table purchases add constraint fk_pur_v foreign key (id_v)
-      references vats (id_v) on delete restrict on update restrict;
+ALTER TABLE prod_v add CONSTRAINT FK_prod_v FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table purchases add constraint fk_pu_inv foreign key (id_inv)
-      references invoices (id_inv) on delete restrict on update restrict;
+ALTER TABLE prod_v add CONSTRAINT FK_prod_v2 FOREIGN KEY (id_v)
+      REFERENCES vats (id_v) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table so_s add constraint fk_so_s foreign key (id_prod)
-      references songs (id_prod) on delete restrict on update restrict;
+ALTER TABLE products add CONSTRAINT FK_prod_cat FOREIGN KEY (id_cat)
+      REFERENCES categories (id_cat) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table so_s add constraint fk_so_s2 foreign key (id_s)
-      references styles (id_s) on delete restrict on update restrict;
+ALTER TABLE purchases add CONSTRAINT FK_i_pur FOREIGN KEY (id_i)
+      REFERENCES individuals (id_i) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table song_in_album add constraint fk_song_in_album foreign key (id_prod_so)
-      references songs (id_prod) on delete restrict on update restrict;
+ALTER TABLE purchases add CONSTRAINT FK_pur_pr FOREIGN KEY (id_pr)
+      REFERENCES prices_history (id_pr) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table song_in_album add constraint fk_song_in_album2 foreign key (id_prod_al)
-      references albums (id_prod) on delete restrict on update restrict;
+ALTER TABLE purchases add CONSTRAINT FK_pur_v FOREIGN KEY (id_v)
+      REFERENCES vats (id_v) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table songs add constraint fk_heritage_1 foreign key (id_prod)
-      references products (id_prod) on delete restrict on update restrict;
+ALTER TABLE purchases add CONSTRAINT FK_pu_inv FOREIGN KEY (id_inv)
+      REFERENCES invoices (id_inv) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
-alter table vats add constraint fk_w_v foreign key (id_w)
-      references websites (id_w) on delete restrict on update restrict;
+ALTER TABLE so_s add CONSTRAINT FK_so_s FOREIGN KEY (id_prod)
+      REFERENCES songs (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
+ALTER TABLE so_s add CONSTRAINT FK_so_s2 FOREIGN KEY (id_s)
+      REFERENCES styles (id_s) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE song_in_album add CONSTRAINT FK_song_in_album FOREIGN KEY (id_prod_so)
+      REFERENCES songs (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE song_in_album add CONSTRAINT FK_song_in_album2 FOREIGN KEY (id_prod_al)
+      REFERENCES albums (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE songs add CONSTRAINT FK_heritage_1 FOREIGN KEY (id_prod)
+      REFERENCES products (id_prod) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE vats add CONSTRAINT FK_w_v FOREIGN KEY (id_w)
+      REFERENCES websites (id_w) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+-- added by me
+
+
+
+INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
+('Others', 1, NOW(), NOW());
+
+INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
+('Songs', 1, NOW(), NOW());
+
+INSERT INTO categories(categorie, active13, CREATEd_at12, updated_at12) VALUES
+('Albums', 1, NOW(), NOW());
+
+DELIMITER $$
+DROP TRIGGER IF EXISTS price_insert $$
+CREATE TRIGGER price_insert BEFORE INSERT
+ON products
+FOR EACH ROW
+BEGIN
+
+INSERT INTO prices_history(id_prod, price) VALUES (NEW.id_prod, NEW.price);
+
+END;
+$$
+
+DELIMITER $$
+DROP TRIGGER IF EXISTS price_update $$
+CREATE TRIGGER price_update BEFORE UPDATE ON products
+FOR EACH ROW
+BEGIN
+
+INSERT INTO prices_history(id_prod, price) VALUES (NEW.id_prod, NEW.price);
+
+END;
+$$

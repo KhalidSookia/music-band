@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{FCE5F8A3-7C0B-49D9-A65B-B908B215F561}" Label="" LastModificationDate="1375130837" Name="music_band" Objects="6" Symbols="7" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{FCE5F8A3-7C0B-49D9-A65B-B908B215F561}" Label="" LastModificationDate="1375227829" Name="music_band" Objects="8" Symbols="4" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -459,7 +459,25 @@ Shadow=0</a:DisplayPreferences>
 <a:PageOrientation>1</a:PageOrientation>
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
-<o:TitleSymbol Id="o4">
+<o:DependencyLinkSymbol Id="o4">
+<a:Rect>((-2296,-4473), (2296,5061))</a:Rect>
+<a:ListOfPoints>((-1,5061),(-1,-4473))</a:ListOfPoints>
+<a:CornerStyle>1</a:CornerStyle>
+<a:ArrowStyle>1</a:ArrowStyle>
+<a:LineColor>5518853</a:LineColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>CENTER 0 Arial,8,N</a:FontList>
+<c:SourceSymbol>
+<o:ModelDocumentSymbol Ref="o5"/>
+</c:SourceSymbol>
+<c:DestinationSymbol>
+<o:ModelDocumentSymbol Ref="o6"/>
+</c:DestinationSymbol>
+<c:Object>
+<o:DependencyLink Ref="o7"/>
+</c:Object>
+</o:DependencyLinkSymbol>
+<o:TitleSymbol Id="o8">
 <a:Text>Version: </a:Text>
 <a:CreationDate>1374579770</a:CreationDate>
 <a:ModificationDate>1374579825</a:ModificationDate>
@@ -487,7 +505,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:KeepAspect>1</a:KeepAspect>
 <c:Object>
-<o:ModelDocument Ref="o6"/>
+<o:ModelDocument Ref="o9"/>
+</c:Object>
+</o:ModelDocumentSymbol>
+<o:ModelDocumentSymbol Id="o6">
+<a:ModificationDate>1375206221</a:ModificationDate>
+<a:IconMode>2</a:IconMode>
+<a:Rect>((-1212,-5684), (1209,-3263))</a:Rect>
+<a:LineColor>12034707</a:LineColor>
+<a:FillColor>16437422</a:FillColor>
+<a:ShadowColor>12632256</a:ShadowColor>
+<a:FontList>OBJSTRN 0 Arial,8,N
+DISPNAME 0 Arial,8,N
+LABL 0 Arial,8,N</a:FontList>
+<a:BrushStyle>6</a:BrushStyle>
+<a:GradientFillMode>65</a:GradientFillMode>
+<a:CustomPictureType>4</a:CustomPictureType>
+<a:CustomTextMode>1</a:CustomTextMode>
+<a:GradientEndColor>16777215</a:GradientEndColor>
+<a:KeepAspect>1</a:KeepAspect>
+<c:Object>
+<o:ModelDocument Ref="o10"/>
 </c:Object>
 </o:ModelDocumentSymbol>
 </c:Symbols>
@@ -496,8 +534,24 @@ LABL 0 Arial,8,N</a:FontList>
 <c:DefaultDiagram>
 <o:ProjectDiagram Ref="o3"/>
 </c:DefaultDiagram>
+<c:DependencyLinks>
+<o:DependencyLink Id="o7">
+<a:ObjectID>866C27E3-94B1-435A-84D6-6293125B509E</a:ObjectID>
+<a:CreationDate>1375206220</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1375206220</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:DependencyLink.Type>Generation</a:DependencyLink.Type>
+<c:InfluentObjects>
+<o:ModelDocument Ref="o10"/>
+</c:InfluentObjects>
+<c:DependentObjects>
+<o:ModelDocument Ref="o9"/>
+</c:DependentObjects>
+</o:DependencyLink>
+</c:DependencyLinks>
 <c:ModelsAndFiles>
-<o:ModelDocument Id="o7">
+<o:ModelDocument Id="o11">
 <a:ObjectID>E20B6F0F-83DE-42DE-8114-0FDD8AE748CD</a:ObjectID>
 <a:Name>Exigences_1</a:Name>
 <a:Code>Exigences_1</a:Code>
@@ -510,7 +564,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModelDocument.ModelID>BC7DF71E-D9A5-4F56-9220-7770591DCCF4</a:ModelDocument.ModelID>
 <a:ModelClassID>DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o8">
+<o:ModelDocument Id="o12">
 <a:ObjectID>1F77864B-1A4C-479E-9BEA-856E0176CAFF</a:ObjectID>
 <a:Name>Diagramme de technologie_1</a:Name>
 <a:Code>Diagramme_de_technologie_1</a:Code>
@@ -523,7 +577,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModelDocument.ModelID>A00AFE45-F2CB-4DD5-A7CF-6A6D5C3447E9</a:ModelDocument.ModelID>
 <a:ModelClassID>5215C79E-A9A1-4738-A627-36DA432EFE29</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o9">
+<o:ModelDocument Id="o13">
 <a:ObjectID>840B5446-528B-4362-B331-BCC3C495B83F</a:ObjectID>
 <a:Name>Diagramme d&#39;organisation_1</a:Name>
 <a:Code>Diagramme_d_organisation_1</a:Code>
@@ -536,18 +590,31 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModelDocument.ModelID>DA8087C5-727D-49E5-BD6C-C0B9FFE0A3C1</a:ModelDocument.ModelID>
 <a:ModelClassID>5215C79E-A9A1-4738-A627-36DA432EFE29</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o6">
+<o:ModelDocument Id="o9">
 <a:ObjectID>ECD14C60-F7A4-4633-82A7-A9ECD756665D</a:ObjectID>
 <a:Name>Données conceptuelles</a:Name>
 <a:Code>donnees_conceptuelles</a:Code>
 <a:CreationDate>1375007966</a:CreationDate>
 <a:Creator>Khalid</a:Creator>
-<a:ModificationDate>1375130837</a:ModificationDate>
+<a:ModificationDate>1375206207</a:ModificationDate>
 <a:Modifier>Khalid</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Données conceptuelles_final.mcd</a:Location>
 <a:Extension>mcd</a:Extension>
 <a:ModelDocument.ModelID>6A4026EA-EFFA-4080-81E3-DC9599BBAFB7</a:ModelDocument.ModelID>
 <a:ModelClassID>1E597170-9350-11D1-AB3C-0020AF71E433</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o10">
+<a:ObjectID>403377A3-6AE3-4DB7-A004-02AB6DE9E7F1</a:ObjectID>
+<a:Name>Données physiques</a:Name>
+<a:Code>donnees_physiques</a:Code>
+<a:CreationDate>1375206220</a:CreationDate>
+<a:Creator>Khalid</a:Creator>
+<a:ModificationDate>1375227829</a:ModificationDate>
+<a:Modifier>Khalid</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/Données physiques.mpd</a:Location>
+<a:Extension>mpd</a:Extension>
+<a:ModelDocument.ModelID>765A22C9-923B-438E-A7C5-73A568E5BFBE</a:ModelDocument.ModelID>
+<a:ModelClassID>CDE44E21-9669-11D1-9914-006097355D9B</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>
 </o:Project>
