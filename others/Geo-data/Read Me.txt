@@ -1,0 +1,1 @@
+i used the cities.csv file along withe the cities_insert_mysql.php file to insert cities into my database

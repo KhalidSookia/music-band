@@ -77,7 +77,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 set_time_limit ( 0 );
 $infile = "cities.txt";
-$outfile = "cities.sql";
+$outfile = "cities.csv";
 $rh = fopen($infile, "r");
 $wh = fopen($outfile, "w+");
 
@@ -87,12 +87,13 @@ while( ($line1 = fgets($rh, 4096000)) !== false ) {
     $parts = preg_split('/\s+/', $line, 2); //limit to splitting into TWO parts, state and city.
     $state = $parts[0];
     $city = preg_replace("/'/", '&#39;', $parts[1]); //replace stray apostrophes
-    $output = sprintf("('%s','%s'),\r\n", $state, $city);
+    $output = sprintf("%s,%s\r\n", $state, $city);
     fwrite($wh, $output);
 }
 
 fclose($rh);
-fclose($wh)
+fclose($wh);
+echo "ok";
 
 
 
